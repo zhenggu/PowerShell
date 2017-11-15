@@ -15,6 +15,12 @@ RUN Import-Module ./containerFiles/dockerInstall.psm1; `
     Install-ChocolateyPackage -PackageName nuget.commandline -Executable nuget.exe; `
     Install-ChocolateyPackage -PackageName cmake.install -Executable cmake.exe -Cleanup
 
+# Install WIX
+ADD https://github.com/wixtoolset/wix3/releases/download/wix311rtm/wix311-binaries.zip /wix.zip
+COPY wix.psm1 containerFiles/wix.psm1  
+RUN Import-Module ./containerFiles/wix.psm1; `
+    Install-WixZip -zipPath \wix.Zip
+
 COPY PowerShellPackage.ps1 /
 
 ENTRYPOINT ["C:\\Program Files\\PowerShell\\latest\\pwsh.exe", "-command"]
