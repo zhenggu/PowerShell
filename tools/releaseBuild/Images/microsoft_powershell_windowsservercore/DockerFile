@@ -5,19 +5,16 @@ LABEL maintainer='PowerShell Team <powershellteam@hotmail.com>'
 LABEL description="This Dockerfile for Windows Server Core with git installed via chocolatey."
 
 SHELL ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-command"]
-# Install Git, NuGet, cMake and WixToolSet
+# Install Git, NuGet and cMake
 # Git installs to C:\Program Files\Git
 # nuget installs to C:\ProgramData\chocolatey\bin\NuGet.exe
 # Cmake installs to C:\Program Files\CMake\
-COPY containerFiles/dockerInstall.psm1 containerFiles/dockerInstall.psm1
+COPY dockerInstall.psm1 containerFiles/dockerInstall.psm1
 RUN Import-Module ./containerFiles/dockerInstall.psm1; `
     Install-ChocolateyPackage -PackageName git -Executable git.exe; `
     Install-ChocolateyPackage -PackageName nuget.commandline -Executable nuget.exe; `
     Install-ChocolateyPackage -PackageName cmake.install -Executable cmake.exe -Cleanup
 
-ADD https://github.com/PowerShell/PowerShell/blob/master/tools/install-powershell.ps1 \install-powershell.ps1
-RUN \install-powershell.ps1 -AddToPath
-
 COPY PowerShellPackage.ps1 /
 
-ENTRYPOINT ["powershell"]
+ENTRYPOINT ["pwsh.exe"]
