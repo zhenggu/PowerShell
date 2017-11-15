@@ -17,4 +17,4 @@ RUN Import-Module ./containerFiles/dockerInstall.psm1; `
 
 COPY PowerShellPackage.ps1 /
 
-ENTRYPOINT ["pwsh.exe"]
+ENTRYPOINT ["C:\\Program Files\\PowerShell\\latest\\pwsh.exe", "-command"]
