@@ -24,6 +24,6 @@ RUN Import-Module ./containerFiles/wix.psm1; `
 COPY PowerShellPackage.ps1 /
 
 ADD https://raw.githubusercontent.com/PowerShell/PowerShell/master/tools/install-powershell.ps1 \install-powershell.ps1
-RUN \install-powershell.ps1 -AddToPath
+RUN \install-powershell.ps1 -AddToPath -Destination 'C:\Program Files\PowerShell\latest'
 
-ENTRYPOINT ["pwsh.exe", "-command"]
+ENTRYPOINT ["C:\\Program Files\\PowerShell\\latest\\pwsh.exe", "-command"]
