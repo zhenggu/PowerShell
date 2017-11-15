@@ -1,6 +1,6 @@
 # escape=`
 #0.3.6 (no powershell 6)
-FROM microsoft/powershell:windowsservercore
+FROM microsoft/windowsservercore
 LABEL maintainer='PowerShell Team <powershellteam@hotmail.com>'
 LABEL description="This Dockerfile for Windows Server Core with git installed via chocolatey."
 
@@ -23,4 +23,7 @@ RUN Import-Module ./containerFiles/wix.psm1; `
 
 COPY PowerShellPackage.ps1 /
 
-ENTRYPOINT ["C:\\Program Files\\PowerShell\\latest\\pwsh.exe", "-command"]
+ADD https://raw.githubusercontent.com/PowerShell/PowerShell/master/tools/install-powershell.ps1 \install-powershell.ps1
+RUN \install-powershell.ps1 -AddToPath
+
+ENTRYPOINT ["pwsh.exe", "-command"]
