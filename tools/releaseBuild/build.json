@@ -9,7 +9,10 @@
             "3968m"
         ],
         "DockerFile": ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\DockerFile",
-        "AdditionalContextFiles" :[ ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1"],
+        "AdditionalContextFiles" :[ 
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1",
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\dockerInstall.psm1"
+        ],
         "DockerImageName": "ps-winsrvcore",
         "BinaryBucket": "release"
     },
@@ -22,7 +25,10 @@
             "3968m"
         ],
         "DockerFile": ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\DockerFile",
-        "AdditionalContextFiles" :[ ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1"],
+        "AdditionalContextFiles" :[ 
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1",
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\dockerInstall.psm1"
+        ],
         "DockerImageName": "ps-winsrvcore",
         "BinaryBucket": "release"
     },
@@ -35,7 +41,10 @@
             "3968m"
         ],
         "DockerFile": ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\DockerFile",
-        "AdditionalContextFiles" :[ ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1"],
+        "AdditionalContextFiles" :[ 
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1",
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\dockerInstall.psm1"
+        ],
         "DockerImageName": "ps-winsrvcore",
         "BinaryBucket": "symbols",
         "BinariesExpected": 1,
@@ -50,7 +59,10 @@
             "3968m"
         ],
         "DockerFile": ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\DockerFile",
-        "AdditionalContextFiles" :[ ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1"],
+        "AdditionalContextFiles" :[ 
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1",
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\dockerInstall.psm1"
+        ],
         "DockerImageName": "ps-winsrvcore",
         "BinaryBucket": "symbols",
         "BinariesExpected": 1,
@@ -65,7 +77,10 @@
             "3968m"
         ],
         "DockerFile": ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\DockerFile",
-        "AdditionalContextFiles" :[ ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1"],
+        "AdditionalContextFiles" :[ 
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1",
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\dockerInstall.psm1"
+        ],
         "DockerImageName": "ps-winsrvcore",
         "BinaryBucket": "signed",
         "BinariesExpected": 2
@@ -79,7 +94,10 @@
             "3968m"
         ],
         "DockerFile": ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\DockerFile",
-        "AdditionalContextFiles" :[ ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1"],
+        "AdditionalContextFiles" :[ 
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\PowerShellPackage.ps1",
+            ".\\tools\\releaseBuild\\Images\\microsoft_powershell_windowsservercore\\dockerInstall.psm1"
+        ],
         "DockerImageName": "ps-winsrvcore",
         "BinaryBucket": "signed",
         "BinariesExpected": 2
